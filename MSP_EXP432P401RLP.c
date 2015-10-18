@@ -60,6 +60,7 @@
 #include <wdt_a.h>
 
 #include "MSP_EXP432P401RLP.h"
+#include "lcd_hw.h"
 
 /*
  *  =============================== DMA ===============================
@@ -142,6 +143,7 @@ void MSP_EXP432P401RLP_initGeneral(void)
  *       reduce memory usage.
  */
 GPIO_PinConfig gpioPinConfigs[] = {
+	LCD_GPIO_CONFIG,
     /* Input pins */
     /* MSP_EXP432P401RLP_S1 */
     GPIOMSP432_P1_1 | GPIO_CFG_IN_PU | GPIO_CFG_IN_INT_RISING,
@@ -173,6 +175,7 @@ GPIO_PinConfig gpioPinConfigs[] = {
  *       reduce memory usage (if placed at end of gpioPinConfigs array).
  */
 GPIO_CallbackFxn gpioCallbackFunctions[] = {
+	LCD_GPIO_CALLBACKS,
     /* MSP_EXP432P401RLP_S1 */
     NULL,
     /* MSP_EXP432P401RLP_S2 */

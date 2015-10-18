@@ -1,26 +1,26 @@
 
-XOPTS = -I"/home/vens/ti/xdctools_3_31_00_24_core/packages/" -Dxdc_target_types__=/home/vens/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/ti/targets/arm/elf/std.h -Dxdc_target_name__=M4F
+XOPTS = -I"/home/burneykb/ti/xdctools_3_31_00_24_core/packages/" -Dxdc_target_types__=/home/burneykb/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/ti/targets/arm/elf/std.h -Dxdc_target_name__=M4F
 
-vpath % /home/vens/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/ti/sysbios/
-vpath %.c /home/vens/ti/xdctools_3_31_00_24_core/packages/
+vpath % /home/burneykb/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/ti/sysbios/
+vpath %.c /home/burneykb/ti/xdctools_3_31_00_24_core/packages/
 
 CCOPTS    = --endian=little -mv7M4 --abi=eabi --float_support=fpv4spd16 -q -ms --opt_for_speed=2  --program_level_compile -o3 -g --optimize_with_debug  -Dti_sysbios_family_arm_m3_Hwi_enableException__D=TRUE -Dti_sysbios_family_arm_m3_Hwi_disablePriority__D=32U -Dti_sysbios_family_arm_m3_Hwi_numSparseInterrupts__D=0U
 
-XDC_ROOT  = /home/vens/ti/xdctools_3_31_00_24_core/packages/
+XDC_ROOT  = /home/burneykb/ti/xdctools_3_31_00_24_core/packages/
 
-BIOS_ROOT = /home/vens/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/ti/sysbios/
+BIOS_ROOT = /home/burneykb/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/ti/sysbios/
 
 BIOS_DEFS =  -Dti_sysbios_BIOS_swiEnabled__D=TRUE -Dti_sysbios_BIOS_taskEnabled__D=TRUE -Dti_sysbios_BIOS_clockEnabled__D=TRUE -Dti_sysbios_BIOS_runtimeCreatesEnabled__D=TRUE -Dti_sysbios_hal_Hwi_DISABLE_ALL_HOOKS -Dti_sysbios_knl_Swi_DISABLE_ALL_HOOKS -Dti_sysbios_knl_Task_DISABLE_ALL_HOOKS -Dti_sysbios_BIOS_smpEnabled__D=FALSE -Dti_sysbios_Build_useHwiMacros -Dti_sysbios_knl_Swi_numPriorities__D=16 -Dti_sysbios_knl_Task_deleteTerminatedTasks__D=FALSE -Dti_sysbios_knl_Task_numPriorities__D=16 -Dti_sysbios_knl_Task_checkStackFlag__D=TRUE -Dti_sysbios_knl_Clock_TICK_SOURCE=ti_sysbios_knl_Clock_TickSource_TIMER -Dti_sysbios_knl_Clock_TICK_MODE=ti_sysbios_knl_Clock_TickMode_PERIODIC -Dti_sysbios_hal_Core_delegate_getId=ti_sysbios_hal_CoreNull_getId__E -Dti_sysbios_hal_Core_delegate_interruptCore=ti_sysbios_hal_CoreNull_interruptCore__E -Dti_sysbios_hal_Core_delegate_lock=ti_sysbios_hal_CoreNull_lock__E -Dti_sysbios_hal_Core_delegate_unlock=ti_sysbios_hal_CoreNull_unlock__E -Dti_sysbios_hal_Core_numCores__D=1 -Dti_sysbios_hal_CoreNull_numCores__D=1 -Dti_sysbios_utils_Load_taskEnabled__D=FALSE -Dti_sysbios_utils_Load_swiEnabled__D=FALSE -Dti_sysbios_family_arm_m3_Hwi_dispatcherSwiSupport__D=TRUE -Dti_sysbios_family_arm_m3_Hwi_dispatcherTaskSupport__D=TRUE -Dti_sysbios_family_arm_m3_Hwi_dispatcherAutoNestingSupport__D=TRUE -Dti_sysbios_family_arm_m3_Hwi_dispatcherIrpTrackingSupport__D=TRUE -Dti_sysbios_knl_Semaphore_supportsEvents__D=FALSE -Dti_sysbios_knl_Semaphore_supportsPriority__D=TRUE
 
-BIOS_INC  = -I"/home/vens/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/"
+BIOS_INC  = -I"/home/burneykb/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/"
 
-TARGET_INC = -I"/home/vens/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/"
+TARGET_INC = -I"/home/burneykb/ti/tirtos_msp43x_2_12_01_33/products/bios_6_41_04_54/packages/"
 
-INCS = $(BIOS_INC) $(TARGET_INC)  --include_path="/home/vens/ti/ccsv6/ccs_base/arm/include" --include_path="/home/vens/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include" --include_path="/home/vens/ti/ccsv6/ccs_base/arm/include/CMSIS" --include_path="/home/vens/ti/tirtos_msp43x_2_12_01_33/products/MSPWare_2_00_00_40a/driverlib/MSP432P4xx" 
+INCS = $(BIOS_INC) $(TARGET_INC)  --include_path="/home/burneykb/ti/ccsv6/ccs_base/arm/include" --include_path="/home/burneykb/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include" --include_path="/home/burneykb/ti/ccsv6/ccs_base/arm/include/CMSIS" --include_path="/home/burneykb/ti/tirtos_msp43x_2_12_01_33/products/MSPWare_2_00_00_40a/driverlib/MSP432P4xx" 
 
-CC = /home/vens/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/bin/armcl -c $(CCOPTS) -I /home/vens/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include
-ASM = /home/vens/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/bin/armcl -c $(CCOPTS) -I /home/vens/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include
-AR = /home/vens/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/bin/armar rq
+CC = /home/burneykb/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/bin/armcl -c $(CCOPTS) -I /home/burneykb/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include
+ASM = /home/burneykb/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/bin/armcl -c $(CCOPTS) -I /home/burneykb/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/include
+AR = /home/burneykb/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.5/bin/armar rq
 
 DEL = rm -f
 CP = cp -f

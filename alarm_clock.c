@@ -51,6 +51,8 @@
 
 /* Board Header file */
 #include "Board.h"
+/* Lcd Header file */
+#include "lcd.h"
 
 /*
  *  ======== heartBeatFxn ========
@@ -70,7 +72,10 @@ Void heartBeatFxn(UArg arg0, UArg arg1)
  */
 int main(void)
 {
-    /* Call board init functions. */
+	/* Create an Error_Block to handle exceptions. */
+    Error_Block eb;
+
+	/* Call board init functions. */
     Board_initGeneral();
     Board_initGPIO();
     // Board_initI2C();
@@ -78,7 +83,12 @@ int main(void)
     // Board_initSPI();
     // Board_initUART();
     // Board_initWatchdog();
+    Error_init(&eb);
 
+    System_printf("Initializing the LCD\n");
+    LCD_init(100, &eb);
+
+    LCD_print(0,"Hello World");
     /* Turn on user LED */
     GPIO_write(Board_LED0, Board_LED_ON);
 

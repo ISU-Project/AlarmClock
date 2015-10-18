@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: '/home/vens/projects/AlarmClock/AlarmClock/alarm_clock.cfg',
+        cfgScript: '/home/burneykb/repos/AlarmClock/alarm_clock.cfg',
         profile: 'release',
         cfgHome: 'configPkg',
 });
@@ -41,7 +41,7 @@ else {
 
 var thisObj = {
     cfg:        '../alarm_clock.cfg',
-    outputPath: '/home/vens/projects/AlarmClock/AlarmClock/Debug/configPkg',
+    outputPath: '/home/burneykb/repos/AlarmClock/Debug/configPkg',
     exeName:    'alarm_clock' + suffix,
     exeIntName: 'alarm_clock' + suffix.replace('.', '_'),
     targ:       targ,

@@ -7,5 +7,5 @@
 #       or equal to the generated config header
 #
 linker.cmd: package/cfg/alarm_clock_pem4f.xdl
-	$(SED) 's"^\"\(package/cfg/alarm_clock_pem4fcfg.cmd\)\"$""\"/home/vens/projects/AlarmClock/AlarmClock/Debug/configPkg/\1\""' package/cfg/alarm_clock_pem4f.xdl > $@
+	$(SED) 's"^\"\(package/cfg/alarm_clock_pem4fcfg.cmd\)\"$""\"/home/burneykb/repos/AlarmClock/Debug/configPkg/\1\""' package/cfg/alarm_clock_pem4f.xdl > $@
 	-$(SETDATE) -r:max package/cfg/alarm_clock_pem4f.h compiler.opt compiler.opt.defs

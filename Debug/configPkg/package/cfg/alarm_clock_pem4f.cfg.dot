@@ -5,7 +5,7 @@ digraph configuration {
     concentrate=true;
     compound=true;
     label="\nConfiguration for configPkg/alarm_clock.xem4f"
-  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="/home/vens/projects/AlarmClock/AlarmClock/alarm_clock.cfg", color=white, fontcolor=blue];
+  node [font=Helvetica, fontsize=14, fontcolor=black];  subgraph cluster0 {label=""; __cfg [label="/home/burneykb/repos/AlarmClock/alarm_clock.cfg", color=white, fontcolor=blue];
     node [font=Helvetica, fontsize=10];    subgraph cluster1 {
         label="";
         xdc_services_global__top [shape=box,label="xdc.services.global\n1,0,0,0", color=white];
@@ -347,12 +347,7 @@ digraph configuration {
     }
     subgraph cluster37 {
         label="";
-        ti_sysbios_syncs__top [shape=box,label="ti.sysbios.syncs\n2,0,0,0,0", color=white];
-        ti_sysbios_syncs__bot [shape=point,label="", style=invis];
-    }
-    subgraph cluster38 {
-        label="";
-        ti_drivers__top [shape=box,label="ti.drivers\n1,0,0,1421781441622", color=white];
+        ti_drivers__top [shape=box,label="ti.drivers\n1,0,0,0", color=white];
         ti_drivers__bot [shape=point,label="", style=invis];
         ti_drivers_GPIO [style=filled,fillcolor=lightgray, label="GPIO"];
         ti_drivers__top -> ti_drivers_GPIO[style=invis];
@@ -360,6 +355,11 @@ digraph configuration {
         ti_drivers_Power [style=filled,fillcolor=lightgray, label="Power"];
         ti_drivers__top -> ti_drivers_Power[style=invis];
         ti_drivers_Power -> ti_drivers__bot[style=invis];
+    }
+    subgraph cluster38 {
+        label="";
+        ti_sysbios_syncs__top [shape=box,label="ti.sysbios.syncs\n2,0,0,0,0", color=white];
+        ti_sysbios_syncs__bot [shape=point,label="", style=invis];
     }
     subgraph cluster39 {
         label="";
@@ -482,9 +482,9 @@ digraph configuration {
     ti_targets_arm_elf_M4F__1_0_5__2_2 [shape=record,label="ti.targets.arm.elf.M4F|1,0,5.2,2",style=filled, fillcolor=lightgrey];
     ti_sysbios_knl__bot -> ti_targets_arm_elf_M4F__1_0_5__2_2 [ltail=cluster36];
     ti_targets_arm_elf_M4F__1_0_5__2_2 [shape=record,label="ti.targets.arm.elf.M4F|1,0,5.2,2",style=filled, fillcolor=lightgrey];
-    ti_sysbios_syncs__bot -> ti_targets_arm_elf_M4F__1_0_5__2_2 [ltail=cluster37];
+    ti_drivers__bot -> ti_targets_arm_elf_M4F__1_0_5__2_2 [ltail=cluster37];
     ti_targets_arm_elf_M4F__1_0_5__2_2 [shape=record,label="ti.targets.arm.elf.M4F|1,0,5.2,2",style=filled, fillcolor=lightgrey];
-    ti_drivers__bot -> ti_targets_arm_elf_M4F__1_0_5__2_2 [ltail=cluster38];
+    ti_sysbios_syncs__bot -> ti_targets_arm_elf_M4F__1_0_5__2_2 [ltail=cluster38];
     ti_targets_arm_elf_M4F__1_0_5__2_2 [shape=record,label="ti.targets.arm.elf.M4F|1,0,5.2,2",style=filled, fillcolor=lightgrey];
     ti_sysbios_family_arm_m3__bot -> ti_targets_arm_elf_M4F__1_0_5__2_2 [ltail=cluster40];
     ti_targets_arm_elf_M4F__1_0_5__2_2 [shape=record,label="ti.targets.arm.elf.M4F|1,0,5.2,2",style=filled, fillcolor=lightgrey];

@@ -45,6 +45,8 @@
 #ifndef __MSP_EXP432P401RLP_H
 #define __MSP_EXP432P401RLP_H
 
+#include "lcd_hw.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -58,7 +60,8 @@ extern "C" {
  *  @brief  Enum of GPIO names on the MSP_EXP432P401RLP dev board
  */
 typedef enum MSP_EXP432P401RLP_GPIOName {
-    MSP_EXP432P401RLP_S1 = 0,
+	LCD_GPIO_NAMES,
+    MSP_EXP432P401RLP_S1,
     MSP_EXP432P401RLP_S2,
     MSP_EXP432P401RLP_LED1,
     MSP_EXP432P401RLP_LED_RED,
